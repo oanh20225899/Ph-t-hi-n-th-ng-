@@ -1,10 +1,21 @@
-# MiAI_Hand_Lang
-Hệ thống nhận diện thủ ngữ - ngôn ngữ ký hiệu tay – để giao tiếp với người khuyết tật
+# Hand Sign Language Recognition System
 
-Article link: http://ainoodle.tech/2019/09/30/xay-dung-he-thong-nhan-dien-thu-ngu-ngon-ngu-ky-hieu-tay-de-giao-tiep-voi-nguoi-khuyet-tat/
+The user places their hand in front of the screen, and the hand sign language recognition system analyzes the gestures and shapes of the hand. Based on this data, the system converts the hand signs into text and displays the corresponding words on the screen. This process allows users to communicate using hand sign language easily and conveniently, with the support of image recognition technology and machine learning.
+#How to use
+1. **Clone the project to your computer**:
+   ```bash
+   git clone https://github.com/oanh20225899/PhatHienThuNgu.git
 
-#MìAI <br>
-Fanpage: http://facebook.com/miaiblog<br>
-Group trao đổi, chia sẻ: https://www.facebook.com/groups/miaigroup<br>
-Website: http://ainoodle.tech<br>
-Youtube: http://bit.ly/miaiyoutube<br>
+3. **Install libraries**:
+   ```bash
+   python text.txt
+4. ** Train AI **:
+   ```bash
+   python train_model.py
+5. ** Run**:
+   ```bash
+    python detection.py
+6. **How to use**:
+   Press 'a' to exit, press 's' to capture a frame
+
+   
