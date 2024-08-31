@@ -6,7 +6,7 @@ import numpy as np
 from keras.models import load_model
 import time
 
-# Cac khai bao bien
+
 prediction = ''
 score = 0
 bgModel = None
@@ -17,10 +17,9 @@ gesture_names = {0: 'E',
                  3: 'V',
                  4: 'B'}
 
-# Load model tu file da train
+
 model = load_model('models/mymodel.h5')
 
-# Ham de predict xem la ky tu gi
 def predict_rgb_image_vgg(image):
     image = np.array(image, dtype='float32')
     image /= 255
@@ -34,7 +33,7 @@ def predict_rgb_image_vgg(image):
     return result, score
 
 
-# Ham xoa nen khoi anh
+
 def remove_background(frame):
     fgmask = bgModel.apply(frame, learningRate=learningRate)
     kernel = np.ones((3, 3), np.uint8)
@@ -43,22 +42,22 @@ def remove_background(frame):
     return res
 
 
-# Khai bao kich thuoc vung detection region
+
 cap_region_x_begin = 0.5
 cap_region_y_end = 0.8
 
-# Cac thong so lay threshold
+
 threshold = 60
 blurValue = 41
 bgSubThreshold = 50#50
 learningRate = 0
 
-# Nguong du doan ky tu
+
 predThreshold= 95
 
-isBgCaptured = 0  # Bien luu tru da capture background chua
+isBgCaptured = 0  
 
-# Camera
+
 camera = cv2.VideoCapture(0)
 camera.set(10,200)
 camera.set(cv2.CAP_PROP_AUTO_EXPOSURE, 0.01)
@@ -114,9 +113,9 @@ while camera.isOpened():
 
     # Xu ly phim bam
     k = cv2.waitKey(10)
-    if k == ord('q'):  # Bam q de thoat
+    if k == ord('a'):  # Bam  de thoat
         break
-    elif k == ord('b'):
+    elif k == ord('s'):
         bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
 
         isBgCaptured = 1
